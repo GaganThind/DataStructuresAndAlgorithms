@@ -1,16 +1,36 @@
 package in.gagan.problems;
-import java.util.Arrays;
 
 public class NthOrderStatistics {
+	
+	private NthOrderStatistics() { }
 
-	final static int[] baseArr = { 3, 5, 7, 8, 10, 4, 6, 2 };
-
-	public static void main(String[] args) {
-		System.out.println(smallestNumberSorting(7));
-	}
-
-	public static int smallestNumberSorting(int index) {
-		Arrays.sort(baseArr);
-		return baseArr[index - 1];
+	/**
+	 * Find nth element in the provided array
+	 * 
+	 * @param inputArr
+	 * @param index
+	 * @return
+	 */
+	public static int nthOrderStatistics(int[] inputArr, int index) {
+		int size = inputArr.length;
+		int maxVal = inputArr[0];
+		int swap;
+		
+		for(int baseLoop = 0; baseLoop < size - 1; baseLoop++) {
+			for(int innerLoop = baseLoop + 1; innerLoop < size; innerLoop++) {
+				if(inputArr[innerLoop] < inputArr[baseLoop]) {
+					swap = inputArr[baseLoop];
+					inputArr[baseLoop] = inputArr[innerLoop];
+					inputArr[innerLoop] = swap;
+				}
+			}
+			
+			if(baseLoop == (index - 1)) {
+				maxVal = inputArr[baseLoop];
+				break;
+			}
+		}
+		
+		return maxVal;
 	}
 }

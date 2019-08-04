@@ -1,14 +1,22 @@
 package in.gagan.algorithms;
 
+import in.gagan.util.Util;
+
 /**
  * Take first element of array, check if that element is least by comparing it with all the rest values.
  * Then take the second element check it with the rest of the array elements.
- * One iteration will result in the element being in correct position
+ * One iteration will result in the element being in correct position.
  * 
- * @author lonedakoo
+ * Complexity: 
+ * 		Average - O(n^2)
+ * 		Worst 	- O(n^2)
+ * 
+ * @author Gagan
  *
  */
 public class SelectionSort {
+	
+	private SelectionSort() { }
 	
 	/**
 	 * Take first element of array, check if that element is least by comparing it with all the rest values.
@@ -19,7 +27,7 @@ public class SelectionSort {
 	 */
 	public static void selectionSort(int[] inputArr) {
 		int sizeOfArray = inputArr.length;
-		int min, swap;
+		int min;
 		for(int baseLoop = 0; baseLoop < sizeOfArray; baseLoop++) {
 			min = baseLoop;
 			for(int index = baseLoop+1; index < sizeOfArray; index++) {
@@ -27,9 +35,7 @@ public class SelectionSort {
 					min = index;
 				}
 			}
-			swap = inputArr[baseLoop];
-			inputArr[baseLoop] = inputArr[min];
-			inputArr[min] = swap;
+			Util.swap(inputArr, baseLoop, min);
 		}
 	}
 }

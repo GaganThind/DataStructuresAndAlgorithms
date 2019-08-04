@@ -39,14 +39,18 @@ public abstract class Util {
 		try {
 			Thread.sleep(sleepTime);
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			
 		}
 	}
 	
-	public static void swapVariables(int var1, int var2) {
-		int tmp = var1;
-		var1 = var2;
-		var2 = tmp;
+	public static void threadDefaultTimeSleep() {
+		threadSleep(1000);
+	}
+	
+	public static void swap(int[] a, int i, int j) {
+		int temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
 	}
 
 }

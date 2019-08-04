@@ -1,13 +1,20 @@
 package in.gagan.algorithms;
 
+import in.gagan.util.Util;
+
 /**
- * Bubble Sort with O(n^2) complexity.
- * Compares 2 adjacent values and swap them if left is min than right
+ * Bubble Sort compares 2 adjacent values and swap them if left is min than right.
  * 
- * @author lonedakoo
+ * Complexity: 
+ * 		Average - O(n^2)
+ * 		Worst 	- O(n^2)
+ * 
+ * @author Gagan
  *
  */
 public class BubbleSort {
+	
+	private BubbleSort() { }
 	
 	/**
 	 * Bubble sort
@@ -15,13 +22,10 @@ public class BubbleSort {
 	 * @param baseArr
 	 */
 	public static void bubbleSort(int[] inputArr) {
-		int swap;
 		for(int baseLoop = 0; baseLoop < inputArr.length; baseLoop++) {
 			for(int index = 0; index < inputArr.length-1; index++) {
 				if(inputArr[index] > inputArr[index+1]) {
-					swap = inputArr[index];
-					inputArr[index] = inputArr[index+1];
-					inputArr[index+1] = swap;
+					Util.swap(inputArr, index, index + 1);
 				}
 			}
 		}
@@ -33,16 +37,13 @@ public class BubbleSort {
 	 * @param baseArr
 	 */
 	public static void optimizedBubbleSort(int[] inputArr) {
-		int swap;
 		int sizeOfArray = inputArr.length;
 		boolean sorted = true;
 		for(int baseLoop = 0; baseLoop < sizeOfArray; baseLoop++) {
 			sorted = true;
 			for(int index = 0; index < (sizeOfArray-1)-baseLoop; index++) {
 				if(inputArr[index] > inputArr[index+1]) {
-					swap = inputArr[index];
-					inputArr[index] = inputArr[index+1];
-					inputArr[index+1] = swap;
+					Util.swap(inputArr, index, index + 1);
 					sorted = false;
 				}
 			}
