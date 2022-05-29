@@ -1,14 +1,8 @@
-package in.gagan;
+package in.gagan.algorithm.sort.main;
+
+import in.gagan.algorithm.sort.*;
 
 import java.util.Arrays;
-
-import in.gagan.algorithms.BubbleSort;
-import in.gagan.algorithms.HeapSort;
-import in.gagan.algorithms.InsertionSort;
-import in.gagan.algorithms.QuickSort;
-import in.gagan.algorithms.SelectionSort;
-import in.gagan.problems.NthOrderStatistics;
-import in.gagan.util.Util;
 
 public class Main {
 	
@@ -20,13 +14,6 @@ public class Main {
 
 	public static void main(String[] args) {
 		sorting();
-		//nthOrderStatistics();
-		
-	}
-	
-	public static void nthOrderStatistics() {
-		int[] inputArr = {3, 83, 12, 4, 5, 2, 45, 32, 86, 89, 1, 9};
-		System.out.println(NthOrderStatistics.nthOrderStatistics(inputArr, 7));
 	}
 	
 	public static void sorting() {

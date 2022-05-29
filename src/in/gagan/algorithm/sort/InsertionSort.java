@@ -1,4 +1,4 @@
-package in.gagan.algorithms;
+package in.gagan.algorithm.sort;
 
 /**
  * Similar to arranging cards in a deck. Start with second element and then traverse to the left and swap the min value.

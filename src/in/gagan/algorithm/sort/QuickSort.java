@@ -1,6 +1,6 @@
-package in.gagan.algorithms;
+package in.gagan.algorithm.sort;
 
-import in.gagan.util.Util;
+import in.gagan.algorithm.sort.main.Util;
 
 /**
  * Take a pivot value in our implementation is middle element and then sort the elements such that left values are less 

@@ -1,6 +1,6 @@
-package in.gagan.algorithms;
+package in.gagan.algorithm.sort;
 
-import in.gagan.util.Util;
+import in.gagan.algorithm.sort.main.Util;
 
 /**
  * Bubble Sort compares 2 adjacent values and swap them if left is min than right.
@@ -19,7 +19,7 @@ public class BubbleSort {
 	/**
 	 * Bubble sort
 	 * 
-	 * @param baseArr
+	 * @param inputArr
 	 */
 	public static void bubbleSort(int[] inputArr) {
 		for(int baseLoop = 0; baseLoop < inputArr.length; baseLoop++) {
@@ -34,11 +34,11 @@ public class BubbleSort {
 	/**
 	 * Optimized bubble sort. This sorting removes the last sorted element as it's already at its correct place.
 	 * 
-	 * @param baseArr
+	 * @param inputArr
 	 */
 	public static void optimizedBubbleSort(int[] inputArr) {
 		int sizeOfArray = inputArr.length;
-		boolean sorted = true;
+		boolean sorted;
 		for(int baseLoop = 0; baseLoop < sizeOfArray; baseLoop++) {
 			sorted = true;
 			for(int index = 0; index < (sizeOfArray-1)-baseLoop; index++) {

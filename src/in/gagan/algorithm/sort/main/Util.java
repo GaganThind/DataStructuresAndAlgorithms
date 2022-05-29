@@ -1,10 +1,10 @@
-package in.gagan.util;
+package in.gagan.algorithm.sort.main;
 
 import java.util.Arrays;
 import java.util.Random;
 import java.util.stream.IntStream;
 
-public abstract class Util {
+public final class Util {
 	
 	private Util() {}
 	

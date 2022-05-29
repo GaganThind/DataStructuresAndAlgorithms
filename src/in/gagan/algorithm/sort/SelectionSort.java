@@ -1,6 +1,6 @@
-package in.gagan.algorithms;
+package in.gagan.algorithm.sort;
 
-import in.gagan.util.Util;
+import in.gagan.algorithm.sort.main.Util;
 
 /**
  * Take first element of array, check if that element is least by comparing it with all the rest values.

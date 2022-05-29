@@ -1,6 +1,6 @@
-package in.gagan.algorithms;
+package in.gagan.algorithm.sort;
 
-import in.gagan.util.Util;
+import in.gagan.algorithm.sort.main.Util;
 
 /**
  * This is based on heap implementation of binary tree. The child node are smaller than the parent node.
